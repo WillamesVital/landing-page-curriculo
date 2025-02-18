@@ -150,7 +150,6 @@ h2 {
   list-style: none;
 }
 
-/* Certificados */
 .links__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -240,12 +239,9 @@ h2 {
   transition: transform 0.3s ease;
 }
 
-/* CSS Atualizado */
-.social-media__container {
-  grid-column: 1 / -1;
-  margin-top: 2rem;
-  border-top: 1px solid var(--terminal-border);
-  padding-top: 2rem;
+
+.contact__link:hover::after {
+  opacity: 1;
 }
 
 .terminal-prompt {
