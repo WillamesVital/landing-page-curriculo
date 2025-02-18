@@ -1,264 +1,472 @@
 /* styles.css */
 :root {
-    --background: #0D1117;        /* Cor do GitHub Dark */
-    --code-background: #161B22;   /* Fundo de bloco de código */
-    --text-primary: #C9D1D9;      /* Texto principal */
-    --text-secondary: #8B949E;    /* Texto secundário */
-    --accent-1: #3FB950;          /* Azul GitHub */
-    --accent-2: #3FB950;          /* Verde GitHub */
-    --accent-3: #FF7B72;          /* Vermelho IDE */
-    --terminal-border: #30363D;   /* Borda estilo terminal */
-  }
-  
-  /* Reset Dark Theme */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Fira Code', monospace;
-  }
-  
-  body {
-    background-color: var(--background);
-    color: var(--text-primary);
-    line-height: 1.6;
-  }
-  
-  /* Efeito de Glitch nos títulos */
-  @keyframes glitch {
-    0% { text-shadow: 2px 2px var(--accent-3); }
-    25% { text-shadow: -2px -2px var(--accent-1); }
-    50% { text-shadow: 2px -2px var(--accent-2); }
-    75% { text-shadow: -2px 2px var(--accent-3); }
-    100% { text-shadow: 2px 2px var(--accent-1); }
-  }
-  
-  /* Header estilo Terminal */
-  header {
-    background: var(--code-background);
-    border-bottom: 3px solid var(--terminal-border);
-    padding: 3rem 1rem;
-    text-align: center;
-    position: relative;
-  }
-  
-  header:before {
-    content: ">_";
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--accent-2);
-    opacity: 0.5;
-  }
-  
-  header h1 {
-    font-size: 2.5rem;
-    color: var(--accent-2);
-    text-shadow: 0 0 10px rgba(88,166,255,0.3);
-  }
-  
-  header p {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-  }
-  
-  /* Navegação estilo Tab Bar */
-  nav {
-    background: var(--code-background);
-    border-bottom: 1px solid var(--terminal-border);
-    padding: 1rem;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    list-style: none;
-  }
-  
-  nav a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: all 0.3s;
-    position: relative;
-  }
-  
-  nav a:hover {
-    background: #3FB950;
-    color: var(--background);
-  }
-  
-  nav a.active:after {
-    content: "◀";
-    position: absolute;
-    right: -10px;
-    color: var(--accent-2);
-  }
-  
-  /* Seções estilo Code Block */
-  section {
-    padding: 4rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  h2 {
-    color: var(--accent-2);
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-    padding-left: 1rem;
-    border-left: 3px solid var(--accent-1);
-  }
-  
-  /* Cards estilo IDE */
-  .experience-item {
-    background: var(--code-background);
-    border: 1px solid var(--terminal-border);
-    padding: 1.5rem;
-    margin: 2rem 0;
-    border-radius: 4px;
-    position: relative;
-  }
-  
-  .experience-item:before {
-    content: "// ";
-    color: var(--text-secondary);
-    position: absolute;
-    left: 10px;
-    top: -15px;
-    background: var(--background);
-    padding: 0 5px;
-  }
-  
-  /* Lista de Skills estilo Tags */
-  #skills ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-  }
-  
-  #skills li {
-    background: rgba(88,166,255,0.1);
-    color: var(--accent-1);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    border: 1px solid var(--terminal-border);
-    font-size: 0.9rem;
-    list-style: none;
-  }
-  
-  /* Seção Contato estilo Formulário de Commit */
-   #contact {
-    background: var(--code-background);
-    padding: 2rem;
-    border-radius: 6px;
-    border: 1px solid var(--terminal-border);
-    max-width: 500px;
-    margin: 2rem auto;
-  }
+  --background: #0D1117;        /* Cor do GitHub Dark */
+  --code-background: #161B22;   /* Fundo de bloco de código */
+  --text-primary: #C9D1D9;      /* Texto principal */
+  --text-secondary: #8B949E;    /* Texto secundário */
+  --accent-1: #3FB950;          /* Azul GitHub */
+  --accent-2: #3FB950;          /* Verde GitHub */
+  --accent-3: #FF7B72;          /* Vermelho IDE */
+  --terminal-border: #30363D;   /* Borda estilo terminal */
+}
 
-  .social-media {
-    display: flex;
-    gap: 3.0rem;
-    justify-content: center;
-    margin-top: 3rem;
+/* Reset Dark Theme */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Code', monospace;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Efeito de Glitch nos títulos */
+@keyframes glitch {
+  0% { text-shadow: 2px 2px var(--accent-3); }
+  25% { text-shadow: -2px -2px var(--accent-1); }
+  50% { text-shadow: 2px -2px var(--accent-2); }
+  75% { text-shadow: -2px 2px var(--accent-3); }
+  100% { text-shadow: 2px 2px var(--accent-1); }
+}
+
+/* Header estilo Terminal */
+header {
+  background: var(--code-background);
+  border-bottom: 3px solid var(--terminal-border);
+  padding: 3rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+header:before {
+  content: ">_";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent-2);
+  opacity: 0.5;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--accent-2);
+  text-shadow: 0 0 10px rgba(88,166,255,0.3);
+}
+
+header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Navegação estilo Tab Bar */
+nav {
+  background: var(--code-background);
+  border-bottom: 1px solid var(--terminal-border);
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s;
+  position: relative;
+}
+
+nav a:hover {
+  background: #3FB950;
+  color: var(--background);
+}
+
+nav a.active:after {
+  content: "◀";
+  position: absolute;
+  right: -10px;
+  color: var(--accent-2);
+}
+
+/* Seções estilo Code Block */
+section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: var(--accent-2);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent-1);
+}
+
+/* Cards estilo IDE */
+.experience-item {
+  background: var(--code-background);
+  border: 1px solid var(--terminal-border);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+  position: relative;
+}
+
+.experience-item:before {
+  content: "// ";
+  color: var(--text-secondary);
+  position: absolute;
+  left: 10px;
+  top: -15px;
+  background: var(--background);
+  padding: 0 5px;
+}
+
+/* Lista de Skills estilo Tags */
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+#skills li {
+  background: rgba(88,166,255,0.1);
+  color: var(--accent-1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid var(--terminal-border);
+  font-size: 0.9rem;
+  list-style: none;
+}
+
+/* Certificados */
+.links__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.links_uteis {
+  background: #161B22;
+  border: 1px solid #30363D;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.links_uteis:hover {
+  transform: translateY(-5px);
+  border-color: #3FB950;
+}   
+
+.links_uteis__header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.links_uteis__icon {
+  font-size: 1.8rem;
+  color: #3FB950;
+  flex-shrink: 0;
+}
+
+.links_uteis__meta {
+  flex-grow: 1;
+}
+
+.links_uteis__title {
+  color: #C9D1D9;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.links_uteis__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #3FB950;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #30363D;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.links_uteis__link:hover {
+  background: rgba(88,166,255,0.1);
+  border-color: #8B949E;
+}
+
+.links_uteis__link i {
+  font-size: 0.8rem;
+}
+
+/* Seção Contato estilo Formulário de Commit */
+ #contact {
+  background: var(--code-background);
+  padding: 2rem;
+  border-radius: 6px;
+  border: 1px solid var(--terminal-border);
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.social-media {
+  display: flex;
+  gap: 3.0rem;
+  justify-content: center;
+  margin-top: 3rem;
 }
 
 
 .social-media__link {
-    display: inline-flex;
-    transition: transform 0.3s ease;
+  display: inline-flex;
+  transition: transform 0.3s ease;
+}
+
+/* CSS Atualizado */
+.social-media__container {
+  grid-column: 1 / -1;
+  margin-top: 2rem;
+  border-top: 1px solid var(--terminal-border);
+  padding-top: 2rem;
+}
+
+.terminal-prompt {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-2);
+  font-family: 'Fira Code', monospace;
+  margin-bottom: 1.5rem;
+}
+
+.prompt-symbol {
+  color: var(--accent-1);
+  font-weight: bold;
+}
+
+.prompt-text {
+  opacity: 0.8;
+}
+
+.localizacao-prompt-text {
+opacity: 0.8;
+}
+
+.telefone-prompt-text {
+opacity: 0.8;
+}
+
+.email-prompt-text {
+opacity: 0.8;
+}
+
+.social-media {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.social-media__link {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-media__icon {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  background: var(--code-background);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--terminal-border);
+  transition: all 0.3s ease;
+  width: 50px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media__link:hover .social-media__icon {
+  color: var(--accent-1);
+  border-color: var(--accent-1);
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(88,166,255,0.2);
+}
+
+/* Efeito de Tooltip */
+.social-media__link::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--code-background);
+  color: var(--accent-2);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  border: 1px solid var(--terminal-border);
+}
+
+.social-media__link:hover::after {
+  opacity: 1;
+}
+
+/* Efeito de Digitação no Prompt */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--accent-1) }
+}
+
+.prompt-text {
+  overflow: hidden;
+  border-right: 2px solid var(--accent-1);
+  white-space: nowrap;
+  animation: 
+      typing 3.5s steps(30, end),
+      blink-caret 0.75s step-end infinite;
+}
+
+.localizacao-prompt-text {
+  overflow: hidden;
+  border-right: 2px solid var(--accent-1);
+  white-space: nowrap;
+  animation: 
+      typing 3.5s steps(30, end),
+      blink-caret 0.75s step-end infinite;
+}
+
+.telefone-prompt-text {
+  overflow: hidden;
+  border-right: 2px solid var(--accent-1);
+  white-space: nowrap;
+  animation: 
+      typing 3.5s steps(30, end),
+      blink-caret 0.75s step-end infinite;
+}
+
+.email-prompt-text {
+  overflow: hidden;
+  border-right: 2px solid var(--accent-1);
+  white-space: nowrap;
+  animation: 
+      typing 3.5s steps(30, end),
+      blink-caret 0.75s step-end infinite;
 }
 
 
 .contact__link:hover::after {
-    opacity: 1;
+  opacity: 1;
 }
-  
-  /* Footer estilo Status Bar */
-  footer {
-    background: var(--code-background);
-    border-top: 3px solid var(--terminal-border);
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 4rem;
-    color: var(--text-secondary);
+
+/* Footer estilo Status Bar */
+footer {
+  background: var(--code-background);
+  border-top: 3px solid var(--terminal-border);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 4rem;
+  color: var(--text-secondary);
+}
+
+/* Efeitos Especiais */
+::-moz-selection {
+  background: var(--accent-1);
+  color: var(--background);
+}
+
+::selection {
+  background: var(--accent-1);
+  color: var(--background);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
   }
-  
-  /* Efeitos Especiais */
-  ::-moz-selection {
-    background: var(--accent-1);
-    color: var(--background);
-  }
-  
-  ::selection {
-    background: var(--accent-1);
-    color: var(--background);
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    header h1 {
-      font-size: 2rem;
-    }
-  
-    #skills ul {
-      justify-content: center;
-    }
-  }
-  
-  /* CSS */
-.back-to-top {
-    position: fixed;
-    bottom: -50px;
-    right: 25px;
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 50%;
-    background: #8B949E;
-    color: white;
-    cursor: pointer;
-    opacity: 0;
-    transition: all 0.4s ease;
-    box-shadow: 0 2px 10px rgba(224, 226, 229, 0.3);
-    display: flex;
-    align-items: center;
+
+  #skills ul {
     justify-content: center;
-    font-size: 1.2rem;
+  }
+}
+
+/* CSS */
+.back-to-top {
+  position: fixed;
+  bottom: -50px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: #8B949E;
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.4s ease;
+  box-shadow: 0 2px 10px rgba(224, 226, 229, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
 }
 
 .back-to-top.show {
-    bottom: 25px;
-    opacity: 1;
+  bottom: 25px;
+  opacity: 1;
 }
 
 .back-to-top:hover {
-    background: #3FB950;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(63,185,80,0.4);
+  background: #3FB950;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(63,185,80,0.4);
 }
 
 .back-to-top:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 /* Animação de pulsação */
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(88,166,255,0.4); }
-    70% { box-shadow: 0 0 0 15px rgba(88,166,255,0); }
-    100% { box-shadow: 0 0 0 0 rgba(88,166,255,0); }
+  0% { box-shadow: 0 0 0 0 rgba(88,166,255,0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(88,166,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(88,166,255,0); }
 }
 
 .back-to-top:hover::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    animation: pulse 1.5s infinite;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
 }
-  /* Adicione isto no <head> */
+/* Adicione isto no <head> */
